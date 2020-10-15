@@ -87,8 +87,8 @@ class Car {
     return this.tank;
   }
   drive(distance){
-    this.odometer = distance;
-    this.tank = this.milesPerGallon - distance;
+    this.odometer += distance;
+    this.tank -= this.milesPerGallon * this.tank - distance;
     
   }
 }
